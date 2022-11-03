@@ -1,5 +1,5 @@
 #include <iostream>
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #include <map>
 
 SDL_Window* init(const char* windowName, int SCREEN_WIDTH, int SCREEN_HEIGHT) {
@@ -63,7 +63,7 @@ int main(){
     SDL_Window* window = init("angler sdl", 640, 426);
     if (window == nullptr) {return -1;}
     SDL_Surface* screenSurface = SDL_GetWindowSurface(window);
-    const char* toLoad = "/Users/admin/files/c++/angler/res/l02.bmp";
+    const char* toLoad = "res/l02.bmp";
     SDL_Surface* helloWorld = loadRes(toLoad);
     if (helloWorld == nullptr) {return -1;}
     SDL_BlitSurface(helloWorld, nullptr, screenSurface, nullptr );
