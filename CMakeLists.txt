@@ -3,7 +3,7 @@ project(angler)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(angler main.cpp)
+add_executable(angler angler/main.cpp)
 
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
